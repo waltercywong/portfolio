@@ -198,11 +198,17 @@ p {
     border-color: #3498db;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: #2980b9;
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3), 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
 .btn-secondary {
@@ -211,11 +217,17 @@ p {
     border-color: #3498db;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus {
     background-color: #3498db;
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3), 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
 .btn-icon {
@@ -233,11 +245,17 @@ p {
     text-decoration: none;
 }
 
-.btn-icon:hover {
+.btn-icon:hover,
+.btn-icon:focus {
     background-color: #3498db;
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-icon:focus {
+    outline: none;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3), 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
 .btn-icon i {
@@ -403,7 +421,7 @@ p {
     padding: 2rem;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -461,7 +479,7 @@ p {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -510,7 +528,7 @@ p {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -571,7 +589,7 @@ p {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -631,6 +649,13 @@ p {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-1px);
 }
 
 .project-links {
@@ -684,6 +709,12 @@ p {
     background-color: #e9ecef;
     border-radius: 4px;
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-bar {
+    background-color: #d1ecf1;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
 }
 
 .skill-progress {
@@ -705,7 +736,7 @@ p {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info h3 {
@@ -729,6 +760,16 @@ p {
     gap: 1rem;
     margin-bottom: 1rem;
     color: #666;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-method:hover {
+    background-color: #f8f9fa;
+    color: #3498db;
+    transform: translateX(5px);
 }
 
 .contact-method i {
@@ -765,7 +806,7 @@ p {
     padding: 1.5rem;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .open-to-section h4 {
@@ -816,7 +857,7 @@ p {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -838,6 +879,7 @@ p {
 .form-group textarea:focus {
     outline: none;
     border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
 .form-group textarea {
@@ -868,7 +910,7 @@ p {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
         padding: 2rem 0;
     }
 
