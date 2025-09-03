@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walter Wong Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Walter Wong</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm Walter Wong</h1>
+                <p class="hero-subtitle">Computer Science Graduate Student | Data Science Enthusiast | Software Engineer</p>
+                <p class="hero-description">
+                    Passionate about leveraging my data science and software engineering skills to create innovative solutions and real-world impact. 
+                    Currently pursuing my Master's in Computer Science with a strong foundation in Data Science and Mathematics from my undergraduate studies.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">About Me</a>
+                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                    <a href="https://github.com/waltercywong" target="_blank" class="btn btn-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/walter-wong-c510/" target="_blank" class="btn btn-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-container">
+                    <img 
+                        src="photos/headshot.jpg" 
+                        alt="Professional headshot" 
+                        class="profile-image"
+                    >
+                </div>
+            </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a dedicated Computer Science graduate student with a passion for both software engineering and data science. 
+                        My journey began with a Bachelor's degree in Data Science, where I developed a strong foundation in statistical analysis, 
+                        machine learning, and data visualization.
+                    </p>
+                    <p>
+                        Currently pursuing my Master's in Computer Science, I'm expanding my expertise in software development, 
+                        algorithms, and system design. I have hands-on experience in both academic and professional settings, 
+                        including teaching and industry work that has shaped my understanding of real-world applications.
+                    </p>
+                    <p>
+                        I'm actively seeking opportunities in Software Engineering and Data Science roles where I can contribute 
+                        to innovative projects and continue growing as a technologist.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>2+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>25+</h3>
+                        <p>Technical Skills Mastered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Master of Science in Computer Science</h3>
+                        <h4>University of California, San Diego</h4>
+                        <p class="timeline-date">September 2025 - Present</p>
+                        <ul class="timeline-details">
+                            <li>GPA: 4.0/4.0</li>
+                            <li>Relevant Coursework: Algorithm Design and Analysis, Machine Learning, Probabilistic Reasoning and Learning, Parallel Computation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science in Data Science</h3>
+                        <h4>University of California, San Diego</h4>
+                        <p class="timeline-date">September 2022 - June 2025</p>
+                        <ul class="timeline-details">
+                            <li>GPA: 3.85/4.0</li>
+                            <li>Relevant Coursework: Machine Learning, Recommender Systems,
+                                Systems for Scalable Analytics, Deep Learning, Data Management, Data Visualization, Optimization for Data Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Instructional Assistant</h3>
+                        <h4>University of California, San Diego</h4>
+                        <p class="experience-date">September 2023 - March 2025</p>
+                    </div>
+                    <div class="experience-content">
+                        <p> Tutoring students for the courses “DSC 20: Programming 
+                            and Data Structures for Data Science” and “DSC 30: 
+                            Data Structures and Algorithms for Data Science”.</p>
+                        <ul>
+                            <li>Hosted 5+ hours of office hours per week</li>
+                            <li>Graded assignments and provided detailed feedback</li>
+                            <li>Mentored students in Python and Java Object-Oriented Programming</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Data Science Intern</h3>
+                        <h4>Resilinc</h4>
+                        <p class="experience-date">June 2023 - September 2023</p>
+                    </div>
+                    <div class="experience-content">
+                        <p>Responsible for designing and implementing a relational 
+                            database to knowledge graph data pipeline. Utilized 
+                            Spark DataFrames and Neo4j's Apache Spark Connector 
+                            to read data in a relational database format and port 
+                            to our KG schema design. Wrote queries in Cypher to 
+                            match results from relational database design.</p>
+                        <ul>
+                            <li>Designed and implemented a relational database to knowledge graph data pipeline</li>
+                            <li>Utilized Spark DataFrames and Neo4j's Apache Spark Connector to read data in a relational database format and port to our KG schema design</li>
+                            <li>Wrote queries in Cypher to match results from relational database design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Personal Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-cloud-sun-rain"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Spatial and Temporal Modeling for Climate Emulation</h3>
+                        <p class="project-date">April 2025 - June 2025</p>
+                        <p>Performed data processing, analysis, and visualization on spatial and temporal climate data to develop multiple deep learning architectures that leverage CNNs and transformers for accurate climate forecasting.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">CNNs</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">LSTM</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Congestion Prediction in Chip Design with Walks and Partitioning</h3>
+                        <p class="project-date">September 2024 - March 2025</p>
+                        <p>Partnered with Qualcomm industry partners to perform comprehensive data analysis on chip congestion data and built upon the graph machine learning DE-HNN model architecture and graph representation to improve predictions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Graph ML</span>
+                            <span class="tech-tag">Analog Chip Design</span>
+                            <span class="tech-tag">Chip Congestion</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Visualizing NBA Scoring Trends</h3>
+                        <p class="project-date">February 2024 - April 2024</p>
+                        <p>Created a website with multiple interactive visualizations on NBA scoring trends using Svelte and D3.js. Applied data scraping and cleaning methods to obtain relevant and sufficient data.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Svelte</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">BeautifulSoup</span>
+                            <span class="tech-tag">Front-End Framework</span>
+                            <span class="tech-tag">Web Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predicting Flight Prices</h3>
+                        <p class="project-date">January 2024 - April 2024</p>
+                        <p>Performed airline flight data analysis and visualization to create predictive linear regression, random forest, XGBoost, and deep learning models in a robust pipeline with data preprocessing, model training, and performance assessment.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Classification</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Modeling Power Outages</h3>
+                        <p class="project-date">October 2023 - December 2023</p>
+                        <p>Performed data cleaning, analysis, and visualization on power outage data to create multiple predictive random forest classification models in an end-to-end pipeline.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Random Forest Regressor</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Plotly</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CypherQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Spark</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Dask</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JUnit</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PyTorch</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Developer Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">VS Code</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">IntelliJ</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Tableau</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Libraries</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">NumPy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Plotly</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Matplotlib</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Seaborn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">D3.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Scipy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Keras</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">AWS EC2</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Google Cloud (GCP)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>wcw003@ucsd.edu</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (510) 304-1861</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Fremont, California</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="from_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="from_email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Walter Wong. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
