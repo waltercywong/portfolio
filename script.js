@@ -113,7 +113,7 @@ if (skillsSection) {
 
 // Initialize EmailJS
 (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    emailjs.init("1x4EOVKwmyfqv0jEF"); // Replace with your EmailJS public key
 })();
 
 // Contact form handling with EmailJS
@@ -153,10 +153,10 @@ if (contactForm) {
             from_email: email,
             subject: subject,
             message: message,
-            to_email: 'wcw003@ucsd.edu'
+            to_email: 'walter21wong@gmail.com'
         };
         
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send('service_sxi1wcn', 'template_6zau8tb', templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Thank you for your message! I\'ll get back to you soon.');
@@ -173,7 +173,7 @@ if (contactForm) {
 }
 
 // Typing effect for hero title
-const typeWriter = (element, text, speed = 5) => {
+const typeWriter = (element, text, speed = 1) => {
     let i = 0;
     let header = 'Hi, I\'m Walter Wong';
     element.innerHTML = '';

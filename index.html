@@ -29,9 +29,9 @@
                 <li class="nav-item">
                     <a href="#projects" class="nav-link">Projects</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="#skills" class="nav-link">Skills</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
@@ -71,7 +71,9 @@
                         src="photos/headshot.jpg" 
                         alt="Professional headshot" 
                         class="profile-image"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.opacity='1';"
                     >
+                    <div class="fallback-icon">👤</div>
                 </div>
             </div>
     </section>
@@ -319,7 +321,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
+    <!-- <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
@@ -506,7 +508,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact" class="section bg-light">
@@ -533,7 +535,6 @@
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -552,6 +553,27 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
+                </div>
+            </div>
+            <div class="open-to-section">
+                <h4>Currently Open To Roles In</h4>
+                <div class="job-types">
+                    <div class="job-type">
+                        <i class="fas fa-code"></i>
+                        <span>Software Engineering</span>
+                    </div>
+                    <div class="job-type">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Data Science</span>
+                    </div>
+                    <div class="job-type">
+                        <i class="fas fa-database"></i>
+                        <span>Data Engineering</span>
+                    </div>
+                    <div class="job-type">
+                        <i class="fas fa-brain"></i>
+                        <span>Machine Learning/AI</span>
+                    </div>
                 </div>
             </div>
         </div>

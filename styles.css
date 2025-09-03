@@ -261,6 +261,32 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.4s ease;
+}
+
+/* Glowing effect behind the profile image */
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.4) 0%, rgba(52, 152, 219, 0.2) 30%, rgba(52, 152, 219, 0.1) 60%, transparent 80%);
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.4s ease;
+    opacity: 1;
+}
+
+/* Enhanced glow on hover */
+.profile-container:hover::before {
+    top: -80px;
+    left: -80px;
+    right: -80px;
+    bottom: -80px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.6) 0%, rgba(52, 152, 219, 0.3) 30%, rgba(52, 152, 219, 0.15) 60%, rgba(52, 152, 219, 0.05) 80%, transparent 90%);
+    opacity: 1;
 }
 
 .profile-image {
@@ -276,15 +302,44 @@ p {
     transform: scale(1.05);
 }
 
-/* Fallback for when image doesn't load */
-.profile-container::before {
-    content: '\f007';
+/* Additional glow layer for more depth */
+.profile-container::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.25) 0%, rgba(52, 152, 219, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    z-index: -2;
+    transition: all 0.4s ease;
+    opacity: 1;
+}
+
+.profile-container:hover::after {
+    top: -60px;
+    left: -60px;
+    right: -60px;
+    bottom: -60px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.4) 0%, rgba(52, 152, 219, 0.2) 40%, rgba(52, 152, 219, 0.1) 60%, transparent 80%);
+    opacity: 1;
+}
+
+/* Fallback icon container */
+.profile-container .fallback-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     font-size: 4rem;
     color: #3498db;
-    position: absolute;
-    z-index: -1;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 /* Alternative positioning options - uncomment one if needed */
@@ -697,6 +752,59 @@ p {
     transform: translateY(-3px);
 }
 
+/* Currently Open To Section */
+.open-to-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.open-to-section h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.job-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.job-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.job-type:hover {
+    background: #e9ecef;
+    border-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.job-type i {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.job-type span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #2c3e50;
+    text-align: center;
+}
+
 .contact-form {
     background: white;
     padding: 2rem;
@@ -802,6 +910,23 @@ p {
         gap: 2rem;
     }
 
+    .job-types {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .job-type {
+        padding: 0.75rem;
+    }
+
+    .job-type i {
+        font-size: 1.2rem;
+    }
+
+    .job-type span {
+        font-size: 0.8rem;
+    }
+
     .experience-grid,
     .projects-grid {
         grid-template-columns: 1fr;
@@ -857,6 +982,35 @@ p {
     .profile-container {
         width: 250px;
         height: 250px;
+    }
+
+    /* Adjust glow size for mobile */
+    .profile-container::before {
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+    }
+
+    .profile-container:hover::before {
+        top: -25px;
+        left: -25px;
+        right: -25px;
+        bottom: -25px;
+    }
+
+    .profile-container::after {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+    }
+
+    .profile-container:hover::after {
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
     }
 }
 
