@@ -286,25 +286,27 @@ p {
 .profile-container::before {
     content: '';
     position: absolute;
-    top: -50px;
-    left: -50px;
-    right: -50px;
-    bottom: -50px;
-    background: radial-gradient(circle, rgba(52, 152, 219, 0.4) 0%, rgba(52, 152, 219, 0.2) 30%, rgba(52, 152, 219, 0.1) 60%, transparent 80%);
-    border-radius: 50%;
-    z-index: -1;
-    transition: all 0.4s ease;
-    opacity: 1;
-}
-
-/* Enhanced glow on hover */
-.profile-container:hover::before {
     top: -80px;
     left: -80px;
     right: -80px;
     bottom: -80px;
-    background: radial-gradient(circle, rgba(52, 152, 219, 0.6) 0%, rgba(52, 152, 219, 0.3) 30%, rgba(52, 152, 219, 0.15) 60%, rgba(52, 152, 219, 0.05) 80%, transparent 90%);
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.8) 0%, rgba(52, 152, 219, 0.5) 20%, rgba(52, 152, 219, 0.3) 40%, rgba(52, 152, 219, 0.15) 60%, rgba(52, 152, 219, 0.05) 80%, transparent 90%);
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.4s ease;
     opacity: 1;
+    animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+
+/* Enhanced glow on hover */
+.profile-container:hover::before {
+    top: -120px;
+    left: -120px;
+    right: -120px;
+    bottom: -120px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 1) 0%, rgba(52, 152, 219, 0.8) 15%, rgba(52, 152, 219, 0.6) 30%, rgba(52, 152, 219, 0.4) 50%, rgba(52, 152, 219, 0.2) 70%, rgba(52, 152, 219, 0.1) 85%, transparent 95%);
+    opacity: 1;
+    animation: none;
 }
 
 .profile-image {
@@ -324,24 +326,27 @@ p {
 .profile-container::after {
     content: '';
     position: absolute;
-    top: -30px;
-    left: -30px;
-    right: -30px;
-    bottom: -30px;
-    background: radial-gradient(circle, rgba(52, 152, 219, 0.25) 0%, rgba(52, 152, 219, 0.1) 40%, transparent 70%);
-    border-radius: 50%;
-    z-index: -2;
-    transition: all 0.4s ease;
-    opacity: 1;
-}
-
-.profile-container:hover::after {
     top: -60px;
     left: -60px;
     right: -60px;
     bottom: -60px;
-    background: radial-gradient(circle, rgba(52, 152, 219, 0.4) 0%, rgba(52, 152, 219, 0.2) 40%, rgba(52, 152, 219, 0.1) 60%, transparent 80%);
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.6) 0%, rgba(52, 152, 219, 0.3) 30%, rgba(52, 152, 219, 0.15) 50%, transparent 75%);
+    border-radius: 50%;
+    z-index: -2;
+    transition: all 0.4s ease;
     opacity: 1;
+    animation: pulseGlow 4s ease-in-out infinite alternate;
+    animation-delay: 1s;
+}
+
+.profile-container:hover::after {
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.8) 0%, rgba(52, 152, 219, 0.5) 25%, rgba(52, 152, 219, 0.3) 50%, rgba(52, 152, 219, 0.15) 70%, transparent 85%);
+    opacity: 1;
+    animation: none;
 }
 
 /* Fallback icon container */
@@ -724,6 +729,144 @@ p {
     transition: width 1s ease;
 }
 
+/* Resume Section */
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.resume-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.resume-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.resume-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.resume-title h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.resume-title p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.resume-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.resume-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 1.2rem;
+}
+
+.resume-btn-download {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.resume-btn-download:hover,
+.resume-btn-download:focus {
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.resume-btn-download:focus {
+    outline: none;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3), 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.resume-btn-view {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.resume-btn-view:hover,
+.resume-btn-view:focus {
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.resume-btn-view:focus {
+    outline: none;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3), 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.resume-viewer {
+    position: relative;
+    background: #f8f9fa;
+}
+
+.resume-pdf {
+    border: none;
+    display: block;
+    width: 100%;
+    background: white;
+}
+
+/* Fallback for browsers that don't support PDF embedding */
+.resume-fallback {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #666;
+    background: #f8f9fa;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fallback-content {
+    max-width: 400px;
+}
+
+.fallback-content i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.fallback-content h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.fallback-content p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;
@@ -959,23 +1102,29 @@ p {
         gap: 1.5rem;
     }
 
-    .job-types {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
+    .resume-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 1.5rem;
     }
 
-    .job-type {
-        padding: 0.75rem;
+    .resume-actions {
+        justify-content: center;
     }
 
-    .job-type i {
-        font-size: 1.2rem;
+    .resume-pdf {
+        height: 600px;
     }
 
-    .job-type span {
-        font-size: 0.8rem;
+    .resume-title h3 {
+        font-size: 1.5rem;
     }
-
+    
+    .resume-preview {
+        padding: 2rem;
+    }
+    
     .experience-grid,
     .projects-grid {
         grid-template-columns: 1fr;
@@ -995,6 +1144,23 @@ p {
 
     .timeline-marker {
         left: 10px;
+    }
+
+    .job-types {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .job-type {
+        padding: 0.75rem;
+    }
+
+    .job-type i {
+        font-size: 1.2rem;
+    }
+
+    .job-type span {
+        font-size: 0.8rem;
     }
 }
 
@@ -1033,6 +1199,28 @@ p {
         height: 250px;
     }
 
+    .resume-pdf {
+        height: 500px;
+    }
+
+    .resume-header {
+        padding: 1rem;
+    }
+
+    .resume-title h3 {
+        font-size: 1.3rem;
+    }
+
+    .resume-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .resume-preview {
+        padding: 1.5rem;
+    }
+    
     /* Adjust glow size for mobile */
     .profile-container::before {
         top: -15px;
